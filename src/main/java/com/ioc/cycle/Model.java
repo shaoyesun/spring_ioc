@@ -5,7 +5,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
- * Created by Administrator on 2017/7/22.
+ * spring bean生命周期测试
  */
 public class Model {
     public static void main(String[] args) {
