@@ -13,7 +13,7 @@ public class User implements BeanNameAware,BeanFactoryAware,ApplicationContextAw
     private int age;
 
     public User() {
-        System.out.println("初始化User");
+        System.out.println("实例化当前bean：User");
     }
 
     public String getName() {
@@ -21,7 +21,7 @@ public class User implements BeanNameAware,BeanFactoryAware,ApplicationContextAw
     }
 
     public void setName(String name) {
-        System.out.println("参数设值 name = " + name);
+        System.out.println("为当前实例参数设值 name = " + name);
         this.name = name;
     }
 
@@ -35,28 +35,28 @@ public class User implements BeanNameAware,BeanFactoryAware,ApplicationContextAw
 
     //获取当前bean引用，该方法可以给s正在实例化的bean id
     public void setBeanName(String s) {
-        System.out.println("BeanNameAware setBeanName bean引用 id = " + s);
+        System.out.println("获取当前bean引用：BeanNameAware setBeanName bean引用 id = " + s);
     }
 
     //获取工厂，该方法可以给beanFactory工厂中所有的bean引用
     public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
-        System.out.println("BeanFactoryAware setBeanFactory bean工厂 " + beanFactory);
+        System.out.println("获取工厂：BeanFactoryAware setBeanFactory bean工厂 " + beanFactory);
     }
 
     //获取上下文，返回容器创建时间等信息
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        System.out.println("ApplicationContextAware setApplicationContext " + applicationContext);
+        System.out.println("获取上下文：ApplicationContextAware setApplicationContext " + applicationContext);
     }
 
     //初始化后处理
     public void afterPropertiesSet() throws Exception {
         name = "after Spring";
-        System.out.println("InitializingBean afterPropertiesSet");
+        System.out.println("初始化后处理器：InitializingBean afterPropertiesSet");
     }
 
     //自己定义的初始化方法
     public void myInit() {
-        System.out.println("my init");
+        System.out.println("自定义初始化方法：my init");
     }
 
     //DisposableBean destroy
@@ -66,11 +66,11 @@ public class User implements BeanNameAware,BeanFactoryAware,ApplicationContextAw
 
     //自定义destroy
     public void myDestroy() {
-        System.out.println("my destroy");
+        System.out.println("自定义销毁方法：my destroy");
     }
 
     //使用bean
     public void sayHi() {
-        System.out.println("Hi " + name);
+        System.out.println("使用bean：Hi " + name);
     }
 }
