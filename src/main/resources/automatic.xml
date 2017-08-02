@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--no 缺省情况下，自动配置是通过“ref”属性手动设定-->
+    <!--<bean id="teacher" class="com.ioc.automatic.Teacher">
+        <property name="student" ref="student"></property>
+    </bean>-->
+
+    <!--根据属性名称自动装配-->
+    <!--<bean id="teacher" class="com.ioc.automatic.Teacher" autowire="byName"></bean>-->
+
+    <!--按数据类型自动装配-->
+    <!--<bean id="teacher" class="com.ioc.automatic.Teacher" autowire="byType"></bean>-->
+
+    <!--在构造函数参数的byType方式-->
+    <bean id="teacher" class="com.ioc.automatic.Teacher">
+        <constructor-arg>
+            <ref bean="student"></ref>
+        </constructor-arg>
+    </bean>
+
+    <bean id="student" class="com.ioc.automatic.Student">
+        <property name="name" value="autowire by name"/>
+    </bean>
+
+</beans>
