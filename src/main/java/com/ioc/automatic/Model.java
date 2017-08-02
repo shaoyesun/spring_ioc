@@ -4,7 +4,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
- * @spring自动装配测试
+ * @ spring自动装配，实现bean间依赖关系的建立
  * @ 1、byName 据属性名称自动装配，如果一个bean的名称和其他bean属性的名称是一样的，将会自装配它。
  * @ 2、byType 按数据类型自动装配。如果一个bean的数据类型是用其它bean属性的数据类型，兼容并自动装配它。
  * @ 3、constructor 在构造函数参数的byType方式。
