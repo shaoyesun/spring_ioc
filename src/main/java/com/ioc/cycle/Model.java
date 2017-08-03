@@ -9,7 +9,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class Model {
     public static void main(String[] args) {
-        ApplicationContext ac = new ClassPathXmlApplicationContext("ApplicationContext.xml");
+        ApplicationContext ac = new ClassPathXmlApplicationContext("applicationContext.xml");
         User user = (User) ac.getBean("user");
         user.sayHi();
     }
