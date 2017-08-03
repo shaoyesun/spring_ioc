@@ -61,7 +61,7 @@ public class User implements BeanNameAware,BeanFactoryAware,ApplicationContextAw
 
     //DisposableBean destroy
     public void destroy() throws Exception {
-        System.out.println("DisposableBean destroy");
+        System.out.println("销毁前置处理器：DisposableBean destroy");
     }
 
     //自定义destroy

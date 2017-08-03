@@ -8,7 +8,7 @@ import org.springframework.beans.factory.config.BeanPostProcessor;
  */
 public class MyBeanPostProcessor implements BeanPostProcessor {
     public Object postProcessBeforeInitialization(Object o, String s) throws BeansException {
-        System.out.println("后置处理器：MyBeanPostProcessor postProcessBeforeInitialization " + o + " " + s);
+        System.out.println("前置处理器：MyBeanPostProcessor postProcessBeforeInitialization " + o + " " + s);
         return o;
     }
 
