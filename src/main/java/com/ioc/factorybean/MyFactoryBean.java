@@ -23,7 +23,7 @@ public class MyFactoryBean implements FactoryBean<User>{
     }
 
     public boolean isSingleton() {
-        return false;
+        return true;
     }
 
     public User getUser() {

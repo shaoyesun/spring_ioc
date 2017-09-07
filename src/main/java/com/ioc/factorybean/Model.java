@@ -11,5 +11,7 @@ public class Model {
         ApplicationContext ac = new ClassPathXmlApplicationContext("factorybean.xml");
         User user = (User) ac.getBean("myFactoryBean");
         System.out.println(user.toString());
+        MyFactoryBean myFactoryBean = (MyFactoryBean) ac.getBean("&myFactoryBean");
+        System.out.println(myFactoryBean.isSingleton());
     }
 }
